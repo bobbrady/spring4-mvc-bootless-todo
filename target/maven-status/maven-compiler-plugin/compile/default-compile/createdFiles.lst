@@ -1,0 +1,9 @@
+todo/config/RootConfig.class
+todo/config/WebConfig.class
+todo/data/ToDoRepositoryImpl.class
+todo/data/ToDoRepository.class
+todo/model/ToDo.class
+todo/web/HomeController.class
+todo/config/SpittrWebAppInitializer.class
+todo/web/ToDoController.class
+todo/model/ToDoForm.class
