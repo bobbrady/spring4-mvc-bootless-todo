@@ -5,7 +5,7 @@ instead of Spring Boot.  The idea is to use this project for comparison with Spr
 auto configuration behavior.
 
 ## Features
-* Embedded Tomcat 8x servlet container.  It will auto deploy and run the projects war file (mvn cargo:run).
+* Embedded Tomcat 8x servlet container.  It will auto deploy and run the project's war file (mvn cargo:run).
 * JSP views for simplicity.
 * Spring MVC and Mockito mock test coverage of controller end points.
 * In-memory ToDo repository for simplicity.
@@ -14,5 +14,6 @@ auto configuration behavior.
 * Clone project
 * Import as Maven project into Eclipse
 * mvn install clean compile package cargo:run
+* http://localhost:9000 to view home page
 
  
