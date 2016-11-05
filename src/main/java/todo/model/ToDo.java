@@ -4,11 +4,14 @@ import java.util.Date;
 import java.util.Objects;
 
 public class ToDo {
-	private final Long id;
-	private final String content;
-	private final Date time;
+	private Long id;
+	private String content;
+	private Date time;
 	private Double latitude;
 	private Double longitude;
+
+	public ToDo() {
+	}
 
 	public ToDo(String content, Date time) {
 		this(null, content, time, null, null);
@@ -17,7 +20,7 @@ public class ToDo {
 	public ToDo(Long id, String content, Date time, Double latitude, Double longitude) {
 		this.id = id;
 		this.content = content;
-		this.time = time;
+		this.time = time == null ? new Date() : time;
 		this.latitude = latitude;
 		this.longitude = longitude;
 	}

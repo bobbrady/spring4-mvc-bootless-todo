@@ -6,11 +6,11 @@ import todo.model.ToDo;
 
 public interface ToDoRepository {
 
-	List<ToDo> findToDos(long maxId);
+	List<ToDo> findToDos(long maxId) throws ToDoNotFoundException;
 
 	List<ToDo> findToDo();
 
-	ToDo findOne(long id);
+	ToDo findOne(long id) throws ToDoNotFoundException;
 
 	ToDo save(ToDo toDo);
 

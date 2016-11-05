@@ -23,7 +23,7 @@ public class ToDoRepositoryImpl implements ToDoRepository {
 	}
 
 	@Override
-	public List<ToDo> findToDos(long maxId) {
+	public List<ToDo> findToDos(long maxId) throws ToDoNotFoundException {
 		int maxIdx = findIndex(maxId);
 		int minIdx = 0;
 		if (maxIdx - DEFAULT_PAGE_DELTA > 0) {
@@ -57,13 +57,13 @@ public class ToDoRepositoryImpl implements ToDoRepository {
 		return savedToDo;
 	}
 
-	private int findIndex(long id) {
+	private int findIndex(long id) throws ToDoNotFoundException {
 		for (int idx = 0; idx < items.size(); idx++) {
 			if (items.get(idx).getId() == id) {
 				return idx;
 			}
 		}
-		return -1;
+		throw new ToDoNotFoundException(id);
 	}
 
 }
